@@ -1,0 +1,76 @@
+.intro {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 1fr 2fr;
+  max-width: 1200px;
+  gap: 80px;
+  padding: 40px 20px;
+  align-items: center;
+}
+
+.intro img {
+  place-self: center;
+}
+
+.intro h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.intro p {
+  color: #525252;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: 3px;
+}
+
+.intro h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url("../detalhe.svg") no-repeat center / contain;
+  width: 200px;
+  height: 200px;
+  top: -40px;
+  left: -75px;
+  z-index: -1;
+}
+
+@media (max-width: 950px) {
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 630px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro {
+    gap: 30px;
+
+  }
+}
+
+@media (max-width: 550px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .intro img {
+    display: none;
+  }
+
+  .intro div {
+    margin: 0 auto;
+  }
+}
